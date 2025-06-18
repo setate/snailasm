@@ -1,0 +1,40 @@
+{
+  "name": "snailasm",
+  "displayName": "snailASM",
+  "description": "a delightfully slow and simple assembly",
+  "main": "./extension.js",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.101.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "snailASM",
+      "aliases": ["snailASM", "snailASM"],
+      "extensions": [".snailasm"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "snailASM",
+      "scopeName": "source.snailasm",
+      "path": "./syntaxes/snailASM.tmLanguage.json"
+    }],
+    "themes": [
+      {
+        "label": "SnailASM Theme",
+        "uiTheme": "vs-dark",
+        "path": "./themes/snailtheme-color-theme.json"
+      }
+    ],
+    "commands": [
+    {
+      "command": "snailasm.compile",
+      "title": "Compile SnailASM File"
+    }
+    ]
+    
+  }
+}

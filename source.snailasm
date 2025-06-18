@@ -1,0 +1,13 @@
+#define MAX 10
+#define TEMP_REG r7
+
+#macro r0
+    push r0
+    push r1
+    push r2
+    push r3
+#endmacro
+
+add r1, r2, r3
+add r1, r2, r3
+BNE 4

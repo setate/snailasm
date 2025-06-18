@@ -1,0 +1,54 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "snailASM",
+	"scopeName": "source.snailasm",
+	"patterns": [
+	  { "include": "#comments" },
+	  { "include": "#r_type_instructions" },
+	  { "include": "#i_type_instructions" },
+	  { "include": "#registers" },
+	  { "include": "#numbers" },
+	  { "include": "#strings" },
+	  { "include": "#directives" }
+	],
+	
+	"repository": {
+	  "r_type_instructions": {
+		"patterns": [{
+			"name": "keyword.instruction.r.snailasm",
+			"match": "(?i)\\b(add|sub|inc|dec|neg|mul|mulh|div|mod|shl|shr|shl8|shr8|and|or|xor|nor|nand|xnor|not|mov|swap|clr|pcl|stor|load|stors|loads|vga|psl|cmp|ret|push|pop|pushlr|poplr)\\b"
+		}]
+	  },
+	  "i_type_instructions": {
+		"patterns": [{
+			"name": "keyword.instruction.i.snailasm",
+			"match": "(?i)\\b(jz|jnz|jmpr|jmp|jeq|jne|JLT|JGT|JLE|JGE|beq|bne|blt|bgt|ble|bge|addi|subi|li|call|callr)\\b"
+	  	}]
+	  },
+	  "comments": {
+		"patterns": [{
+		  "name": "comment.line.semicolon.snailasm",
+		  "match": ";.*$"
+		}]
+	  },
+	  "registers": {
+		"patterns": [{
+		  "name": "variable.register.snailasm",
+		  "match": "(?i)\\b(r0|r1|r2|r3|r4|r5|r6|r7)\\b"
+		}]
+	  },
+	  "numbers": {
+		"patterns": [{
+		  "name": "constant.numeric.snailasm",
+		  "match": "\\b-?(0x[0-9A-Fa-f]+|\\d+)\\b"
+		}]
+		},
+	  "directives": {
+		"patterns": [{
+		  "name": "keyword.preprocessor.snailasm",
+		  "match": "#(define|macro|endm|endmacro)\\b"
+		}]
+	  }
+	}
+  }
+  

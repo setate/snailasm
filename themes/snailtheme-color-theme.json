@@ -1,0 +1,52 @@
+{
+  "name": "SnailASM Theme",
+  "type": "dark",
+  "tokenColors": [
+    {
+      "name": "SnailASM: r_type_instructions",
+      "scope": "keyword.instruction.r.snailasm",
+      "settings": {
+        "foreground": "#eb8f57",
+        //"fontStyle": "bold"
+      }
+    },
+	  {
+      "name": "SnailASM: i_type_instructions",
+      "scope": "keyword.instruction.i.snailasm",
+      "settings": {
+        "foreground": "#ebbf57",
+        //"fontStyle": "bold"
+      }
+    },
+    {
+      "name": "SnailASM: Registers",
+      "scope": "variable.register.snailasm",
+      "settings": {
+        "foreground": "#9accff"
+      }
+    },
+    {
+      "name": "SnailASM: Numbers",
+      "scope": "constant.numeric.snailasm",
+      "settings": {
+        "foreground": "#a8cf86"
+      }
+    },
+    {
+      "name": "SnailASM: Comments",
+      "scope": "comment.line.semicolon.snailasm",
+      "settings": {
+        "foreground": "#546E7A",
+        //"fontStyle": "italic"
+      }
+    },
+    {
+      "name": "SnailASM: Preprocessor / Macros",
+      "scope": "keyword.preprocessor.snailasm",
+      "settings": {
+        "foreground": "#C792EA",
+        //"fontStyle": "bold"
+      }
+    }
+  ]
+}
